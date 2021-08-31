@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header .active{
+    background: red;
+}
+header .left-navbar{
+    margin-left: 10rem;
+}
+header .left-navbar h2{
+    font-weight:bolder;
+}
+header .right-navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .right-navbar ul li{
+    list-style: none;
+    padding: .7rem;
+    text-transform: uppercase;
+}
+header .right-navbar ul li a{
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: 'Raleway', sans-serif;
+    color: #8E8E8E;
+    transition: all .2s ease;
+    position: relative;
+}
+header .right-navbar ul li a::after{
+    content: "";
+    background-color: #f62b0a;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: all .2s ease;
+}
+header .right-navbar ul li a:hover{
+    color:#f62b0a;
+}
+header .right-navbar ul li a:hover:after{
+   width: 100%;
+}
+header .bar{
+    display: none;
+}
+section .top-section{
+    background: url("https://www.setaswall.com/wp-content/uploads/2017/03/Cosmos-4K-Wallpaper-3840x2160.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 400px;
+    flex-direction: column;
+}
+
+section .top-section h1{
+    z-index: 100;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: black;
+}
+section .top-section h2{
+    margin: 1rem;
+    font-size: 2rem;
+}
+.middle-section{
+    padding: 3rem 2rem;
+}
+.middle-section .card{
+    margin: 2rem;
+    flex-direction: column;
+    width: 20rem;
+    height: 8rem;
+}
+.middle-section .card h1{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    height: 20%;
+}
+.middle-section .card p{
+    height: 80%;
+    color: #909090;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+.information{
+    background-color: #f4f4f4;
+    height: 700px;
+    width: 100%;
+    display: flex;
+}
+.information .left-info{
+   width: 35vw;
+   background: url("./images/mobilePhone.png") no-repeat center;
+}
+.information .right-info{
+    width: 65vw; 
+    flex-direction: column;
+}
+.information .right-info .card-item{
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.information .right-info .card-item h1{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight:bolder;
+    color: #333333;
+}
+.information .right-info .card-item p{
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: #8B8B8B;
+    letter-spacing: 1px;
+    font-weight: 800;
+    width: 45vw;
+}
+.story{
+    background: linear-gradient( rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 0.8)100%), url("https://wallpaperaccess.com/full/1076736.jpg") no-repeat center;
+    display: flex;
+
+}
+.story .left-story{
+    width: 50%;
+    padding-left: 14rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.story .left-story h1{
+    font-size: 26px;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: bolder;
+}
+.story .left-story p{
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+.story .right-story{
+    width: 50%;
+    padding-right: 14rem;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.progress-bar{
+    margin-bottom: 1.5rem;
+}
+.progress-line{
+    margin-top: 1.5rem;
+    height: 10px;
+    width: 100%;
+   background: white;
+   position: relative;
+}
+.progress-line span{
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: #f62b0a;
+}
+.container{
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    padding: 6rem;
+    clip-path: polygon(78% 1%, 100% 24%, 100% 99%, 0 100%, 0 28%);
+}
+.container .bell{
+    width: 30vw;
+}
+.container .details{
+    
+}
+.container h1{
+    font-size: 26px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.container p{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+footer{
+    background: #191919;
+    display: flex;
+    padding: 3rem;
+}
+footer .item{
+    width: 20rem;
+    height: 15rem;
+    margin: 1rem;
+}
+footer .item h1{
+ color: #DDDDDD;
+ font-size: 14px;
+ font-weight: bolder;
+ letter-spacing: 2px;
+ word-spacing: 2px;
+ text-transform: uppercase;
+ font-family: 'Raleway', sans-serif;
+ margin-bottom: 1.5rem;
+}
+footer .item p{
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    color: #BFBFBF;
+    font-weight: bolder;
+}
+footer .item ul li{
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    list-style: none;
+    font-weight: bolder;
+    color: #BFBFBF;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.primary-btn{
+   background: #f62b0a;
+   text-transform: uppercase;
+   padding: .5rem;
+   color: #FFFFFF;
+   outline: none;
+   border: none;
+   font-weight: bolder;
+   margin-top: 1rem;
+}
+.item .img-gallery{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2px;
+}
+.gallery{
+    text-align: center;
+}
+.item .img-gallery img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+.copyright{
+    background: black;
+}
+.copyright{
+    display: flex;
+    color:  white;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.copyright .left-copyright h1{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+.copyright .right-copyright ul{
+   display: flex;
+}
+.copyright .right-copyright ul li{
+    list-style: none;
+    padding-left: .5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.copyright .right-copyright ul span{
+    padding-left: .5rem;
+}
+@media(max-width:1100px){
+     .story .left-story{
+         padding-top: 2rem;
+         padding-bottom: 2rem;
+         padding-left: 4rem;
+     }
+     .story .right-story{
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        padding-right: 4rem;
+        padding-left: 3rem;
+     }
+     footer{
+         padding:1.5rem;
+     }
+     footer .item{
+         margin: 0.5rem;
+     }
+}
+@media(max-width:1070px){
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .left-navbar{
+        margin-bottom: 1rem;
+        margin-left: 0;
+    }
+    header .right-navbar ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media(max-width:956px){
+    header{
+        padding:1.5rem;
+        position: relative;
+    }
+    header .right-navbar{
+        display: none;
+    }
+    header .bar{
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 300px;
+        height: 30px;
+        width:30px;
+        background: #8B8B8B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(max-width:940px){
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .item{
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+    footer .item h1{
+        margin-bottom: 2rem;
+    }
+    .item .img-gallery{
+        grid-gap: 1px;
+    }
+    .gallery{
+        text-align:left;
+    }
+    .item .img-gallery img{
+        width:170px;
+        height: 200px;
+    }
+}
+@media(max-width:830px){
+    .item .img-gallery{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .middle-section{
+        flex-direction: column;
+        padding:3rem 4rem;
+    }
+    .middle-section .card{
+        margin: 1rem;
+        width: 100%;
+        height: 4rem;
+    }
+    .information{
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+    }
+    .information .left-info{
+        height: 600px;
+        margin: auto;
+        background: url("./images/mobilePhone.png") no-repeat center;
+     }
+     .information .right-info{
+         height: auto;
+         margin: .2rem;
+        width: 100%;
+        display: flex;
+        /* justify-content: flex-start;
+        align-items: flex-start; */
+     }
+     .information .right-info .card-item h1{
+         text-align:left;
+     }
+     .information .right-info .card-item p{
+        width: 100%;
+    }
+    .story{
+        flex-direction: column;
+    }
+    .story .left-story{
+        width: 100%;
+        padding-right: 1rem;
+    }
+    .story .right-story{
+        width: 100%;
+        margin-left: 1rem;
+    }
+    header .bar{
+        right: 30px;
+    }
+}
+@media(max-width:685px){
+    .container{
+        padding:2rem
+    }
+    .item .img-gallery img{
+        width:130px;
+        height: 180px;
+    }
+    .copyright{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .copyright .left-copyright{
+        margin:1rem;
+    }
+}
+@media(max-width:490px){
+    section .top-section h1{
+        font-size: 2.5rem;
+    }
+    section .top-section h2{
+        font-size: 1.5rem;
+    }
+    .item .img-gallery img{
+        width:80px;
+        height: 100px;
+    }
+    .copyright{
+        padding:0;
+        padding-bottom: 2rem;
+    }
+    .copyright .right-copyright ul li{
+        padding-left: 0rem;
+        font-size: 13px;
+    }
+}
+@media(max-width:378px){
+    .item .img-gallery img{
+        width:70px;
+        height: 80px;
+    }
+    
+}
